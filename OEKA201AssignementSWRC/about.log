@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.26)  30 APR 2024 15:44
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.26)  30 APR 2024 15:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**index.tex
-(./index.tex
+**about.tex
+(./about.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -287,8 +287,8 @@ For immediate help type H <return>.
 l.26 \fi
          
 Here is how much of TeX's memory you used:
- 10397 strings out of 476760
- 232527 string characters out of 5802154
+ 10398 strings out of 476760
+ 232532 string characters out of 5802154
  1921148 words of memory out of 5000000
  32419 multiletter control sequences out of 15000+600000
  558085 words of font info for 38 fonts, out of 8000000 for 9000
