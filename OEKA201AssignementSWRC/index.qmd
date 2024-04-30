@@ -1,11 +1,127 @@
----
-title: "OEKA201AssignementSWRC"
----
+# Introduction
 
-This is a Quarto website.
+  Goal of this paper is to showcase skills    learned during programming part of the      course by implementing R language into      Quarto document.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Exercise 1 from Problem Set
+
+### Models
+
+Would like to refer to [@wickham2023r] and [@bjornar].
+
+Model 1: One variable and linear 
+
+Model 2: Two variables and non-linear
+
+# 
+
+### Text part
+
+Here are the plots the get a better understanding of the models after.
+
+### The frequency distribution of the categoricals variables :
 
 ```{r}
-1 + 1
+
+usedvw <- read.csv("usedvw.csv")
+data("usedvw.csv")
+freq_table <- table(usedvw$model)
+
+barplot(freq_table, main = "Frequency distribution of model",
+        xlab = "Model", ylab = "Frequency")
 ```
+
+model 1 = Amarok; model 2 = Golf; model 3 = Golf SV; model 4 = Passat; model 5 = Polo; model 6 = Scirocco; model 7 = Sharan; model 8 = T-Roc; model 9 = Tiguan; model 10 = Touareg; model 11 = Up;
+
+```{r}
+data <- read.csv("usedvw.csv")
+freq_table <- table(usedvw$transmission)
+
+barplot(freq_table, main = "Frequency distribution of transmission",
+        xlab = "Transmission", ylab = "Frequency")
+```
+
+Transmission 1 = automatic; Transmission 2 = manual; Transmission 3 = semi-automatic
+
+```{r}
+data <- read.csv("usedvw.csv")
+freq_table <- table(usedvw$fuelType)
+
+barplot(freq_table, main = "Frequency distribution of FuelType",
+        xlab = "FuelType", ylab = "Frequency")
+```
+
+FuelType 1 = diesel; FuelType 2 = petrol
+
+Now, let's see the correlation between age and price.
+
+```{r}
+library(ggplot2)
+
+
+ggplot2::ggplot(usedvw, aes(x = age, y = price)) +
+  geom_point() +
+  labs(title = "Correlation graph between age and price",
+       x = "age", y = "price")
+```
+
+### Descriptive statistics
+
+```{R}
+
+
+data <- read.csv("usedvw.csv")
+descsum <- summary(data)
+descsum
+```
+
+### Estimations
+
+Model 1
+
+
+
+Model 2
+
+
+
+### Predictions
+
+
+
+Predictions for the Model 1
+
+
+
+Predictions for the Model 2
+
+
+
+
+# Conclusions
+
+**Number of words in the assignment:**
+
+```{R}
+library(stringr)
+
+count_words <- function(quarto_file) {
+  contenu <- readLines(quarto_file)
+  nombre_mots <- sum(str_count(contenu, "\\S+"))
+  
+  cat("Word count :", nombre_mots, "\n")
+}
+count_words("index.qmd")
+
+```
+
+## Appendix
+
+added an example (adjust with what you have)
+
+```{r}
+#| label: fig-mod1
+#| fig-cap: 'Model1'
+knitr::include_graphics("price_mileage.png")
+```
+
+@fig-mod1 shows GRETL output ...

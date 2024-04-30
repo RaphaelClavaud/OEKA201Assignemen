@@ -21,7 +21,7 @@ format:
     depth: 3
     numbered: true
     figtab: true
-    mainfont: Times
+    mainfont: Times New Roman
     colorlinks: true
   docx:
     toc: true
