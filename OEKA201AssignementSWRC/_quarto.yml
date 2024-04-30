@@ -1,19 +1,39 @@
 project:
   type: website
+  output-dir: submitted
 
 website:
-  title: "OEKA201AssignementSWRC"
+  title: "OEKA201AssignmentSWRC"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
     toc: true
+    depth: 3
+    numbered: true
+    mainfont: Arial
+    fontsize: "1.2em"
+    linestretch: 1.5
+  pdf:
+    toc: true
+    depth: 3
+    numbered: true
+    figtab: true
+    mainfont: Times
+    colorlinks: true
+  docx:
+    toc: true
+    depth: 3
+  epub:
+    toc: true
+    depth: 3
+    mainfont: Verdana
 
-editor: visual
+bibliography: ref.bib
+
+
+
+
 
